@@ -1,0 +1,55 @@
+/* header{
+    background: #ffffff;
+    padding: 10px 16px;
+    color: #000000;
+}
+
+
+
+.top-container {
+    background-color: #f1f1f1;
+    padding: 30px;
+    text-align: center;
+}
+
+.content {
+    padding: 16px;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.sticky+.content {
+    padding-top: 102px;
+} */
+
+body {
+    font-family: 'Roboto', sans-serif;
+    padding-top: 3.5rem;
+
+
+}
+.navbar{
+    background-color: #ffffff;
+}
+
+@media screen and (max-width: 800px) {
+
+}
+
+
+.nav-link{
+    color: black;
+}
+
+.jumbotron{
+    background-image: url("../img/bannerImage.jpg");
+    height: 50%;
+      background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}

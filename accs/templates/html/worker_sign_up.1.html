@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v3.8.5">
+    <title>😍Trabalhe connosco | Weeza</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/checkout/">
+
+
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+
+<body>
+    <div class="container">
+        <div class="py-5 text-center">
+            <img class="d-block mx-auto mb-4" src="" alt="" width="72" height="72">
+            <h2>Checkout form</h2>
+            <p class="lead">Below is an example form built entirely with Bootstrap’s form controls. Each required form
+                group has a validation state that can be triggered by attempting to submit the form without completing
+                it.</p>
+        </div>
+
+
+        <form form method="post" class="needs-validation" novalidate>
+            {% csrf_token %}
+
+            <!-- Personal details -->
+            <h4 class=" mb-3">Dados Pessoais</h4>
+            <hr class="mb-4">
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label for="firstName">Nome <span class="text-muted">*</span></label>
+                    <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+                    <div class="invalid-feedback">
+                        Por favor introduza um nome válido.
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="lastName">Sobrenome<span class="text-muted">*</span></label>
+                    <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
+                    <div class="invalid-feedback">
+                        Por favor introduza um Sobrenome válido.
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="phoneNumber">Número de celular <span class="text-muted">*</span></label>
+                <input type="tel" class="form-control" id="phoneNumber" placeholder="ex: 923 661 340">
+                <div class="invalid-feedback">
+                    Por favor introduza um email válido
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="email">Email <span class="text-muted">(Opcional)</span></label>
+                <input type="email" class="form-control" id="email" placeholder="ex: eu123@exemplo.com">
+                <div class="invalid-feedback">
+                    Por favor introduza um email válido
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="nationalIDNumber">Possuidor do Bilhete de Identidade Nº <span
+                        class="text-muted">*</span></label>
+                <input type="text" class="form-control" id="nationalIDNumber" placeholder="" required>
+                <div class="invalid-feedback">
+                    Por favor introduza um número de BI válido
+                </div>
+            </div>
+            <!-- Address details -->
+            <br>
+            <h4 class="mb-3">Informação sobre a sua Moradia</h4>
+            <hr class="mb-4">
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label for="zip">Morrador da Rua</label>
+                    <input type="text" class="form-control" id="street" placeholder="">
+                    <div class="invalid-feedback">
+                        Por favor preencha o campo com rua válida
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <!-- It will be good to suggest the user as he tries to fill in -->
+                    <label for="neighbourhood">Bairro<span class="text-muted">*</span></label>
+                    <input type="text" class="form-control" id="neighbourhood" placeholder="" required>
+                    <div class="invalid-feedback">
+                        Por favor preencha este campo!
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label for="country">Município<span class="text-muted">*</span></label>
+                    <select class="custom-select d-block w-100" id="municipality" required>
+                        <option value="cacuaco">Cacuaco</option>
+                        <option value="kilamba_Kiaxi">Kilamba-Kiaxi</option>
+                        <option value="rangel">Rangel</option>
+                        <option value="sambizanga">Sambizanga</option>
+                        <option value="cazenga">Cazenga</option>
+                        <option value="samba">Samba</option>
+                        <option value="luanda">Luanda</option>
+                        <option value="belas">Belas</option>
+                        <option value="talatona">Talatona</option>
+                    </select>
+                    <div class="invalid-feedback">
+                        Por favor selecione um município
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="state">Provincia<span class="text-muted">*</span></label>
+                    <select class="custom-select d-block w-100" id="state" required>
+                        <option value="luanda" selected>Luanda</option>
+                    </select>
+                    <div class="invalid-feedback">
+                        Por favor selecione uma provincia
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Service details -->
+            <br>
+            <h4 class="mb-3">Sobre o seu serviço</h4>
+            <hr class="mb-4">
+            <div class="mb-3">
+                <label for="service">Serviço<span class="text-muted">*</span></label>
+
+                <select class="form-control" id="service">
+                    <option value="electronic_repair">Reparação de electrónicos</option>
+                    <option value="home_cleaning">Limpeza de Casa</option>
+                    <option value="electrician">Electricista</option>
+                    <option value="plumbing">Canalização</option>
+                    <option value="cold_and_air_conditioning">Frio e Climatização</option>
+                    <option value="mechanic">Mecânico</option>
+                    <option value="car_wash">Lavagem de Carro</option>
+                    <option value="lock_smith">Serralheiro</option>
+                </select>
+
+            </div>
+
+            <div class="mb-3">
+                <label for="service">Anos de experiência<span class="text-muted">*</span></label>
+
+                <select class="form-control" id="years_of_experience">
+                    <option value="one_years_experience">1 ano ou menos</option>
+                    <option value="two_years_experience">2 anos</option>
+                    <option value="three_years_experience">3 anos</option>
+                    <option value="four_years_experience">4 anos</option>
+                    <option value="5_years_experience">5 anos ou mais</option>
+
+                </select>
+
+            </div>
+
+            <hr class="mb-4">
+            <br>
+            <h4 class="mb-3">Escolha os dias que pretendes trabalhar </h4>
+            <hr class="mb-4">
+            <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="workday_monday">
+                <label class="custom-control-label" for="workday_monday">Segunda-Feira</label>
+            </div>
+            <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="workday_tuesday">
+                <label class="custom-control-label" for="workday_tuesday">Terça-Feira</label>
+            </div>
+            <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="workday_wednesday">
+                <label class="custom-control-label" for="workday_wednesday">Quarta-Feira</label>
+            </div>
+            <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="workday_thursday">
+                <label class="custom-control-label" for="workday_thursday">Quinta-Feira</label>
+            </div>
+            <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="workday_friday">
+                <label class="custom-control-label" for="workday_friday">Sexta-Feira</label>
+            </div>
+            <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="workday_saturday">
+                <label class="custom-control-label" for="workday_saturday">Sábado</label>
+            </div>
+
+            <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="workday_sunday">
+                <label class="custom-control-label" for="workday_sunday">Domingo</label>
+            </div>
+
+            <!-- Banking details -->
+            <br>
+            <h4 class="mb-3">Informação Bancária </h4>
+            <hr class="mb-4">
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label for="bank_name">Nome do Banco</label>
+                    <select class="form-control" id="bank_name">
+                        <option value="bank_BAI">BANCO ANGOLANO DE INVESTIMENTOS, S.A. BAI</option>
+                        <option value="bank_YETU">BANCO YETU, S.A. YETU</option>
+                        <option value="bank_BMF">BANCO BAI MICRO FINANÇAS, S.A. BMF</option>
+                        <option value="bank_BIC">BANCO BIC, S.A. BIC</option>
+                        <option value="bank_BCGA">BANCO CAIXA GERAL ANGOLA, S.A. BCGA</option>
+                        <option value="bank_BCA">BANCO COMERCIAL ANGOLANO, S.A. BCA</option>
+                        <option value="bank_BCH">BANCO COMERCIAL DO HUAMBO, S.A. BCH</option>
+                        <option value="bank_BCI">BANCO DE COMÉRCIO E INDÚSTRIA, S.A. BCI</option>
+                        <option value="bank_BDA">BANCO DE DESENVOLVIMENTO DE ANGOLA, S.A. BDA</option>
+                        <option value="bank_BFA">BANCO DE FOMENTO ANGOLA, S.A. BFA</option>
+                        <option value="bank_BIR">BANCO DE INVESTIMENTO RURAL, S.A. BIR</option>
+                        <option value="bank_BNI">BANCO DE NEGÓCIOS INTERNACIONAL, S.A. BNI</option>
+                        <option value="bank_BPC">BANCO DE POUPANÇA E CRÉDITO, S.A. BPC</option>
+                        <option value="bank_BE">BANCO ECONÓMICO, S.A. BE</option>
+                        <option value="bank_KEVE">BANCO KEVE, S.A. KEVE</option>
+                        <option value="bank_BKI">BANCO KWANZA INVESTIMENTO, S.A. BKI</option>
+                        <option value="bank_BPG">BANCO PRESTÍGIO, S.A. BPG</option>
+                        <option value="bank_ATL">BANCO MILLENNIUM ATLÂNTICO, S.A. ATL</option>
+                        <option value="bank_BSOL">BANCO SOL, S.A. BSOL</option>
+                        <option value="bank_BVB">BANCO VALOR, S.A. BVB</option>
+                        <option value="bank_VTB">BANCO VTB ÁFRICA, S.A. VTB</option>
+                        <option value="bank_FNB">FINIBANCO ANGOLA, S.A. FNB</option>
+                        <option value="bank_SBA">STANDARD BANK DE ANGOLA, S.A. SBA</option>
+                        <option value="bank_SCBA">STANDARD CHARTERED BANK DE ANGOLA, S.A. SCBA</option>
+                        <option value="bank_BCS">BCS – BANCO DE CRÉDITO DO SUL, S.A. BCS</option>
+                        <option value="bank_BOCLB">BANCO DA CHINA LIMITADA – SUCURSAL EM LUANDA BOCLB</option>
+                    </select>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="account_number">Numero da conta</label>
+                    <input type="text" class="form-control" id="account_number" placeholder="" required>
+                    <div class="invalid-feedback">
+                        O número introduzido não é válido, por favor tente novamente
+                    </div>
+                </div>
+            </div>
+
+            <hr class="mb-4">
+            <button class="btn btn-primary btn-lg btn-block" type="submit">Avançar</button>
+        </form>
+    </div>
+    </div>
+
+    <!-- Form from form.py  -->
+
+    <footer class="my-5 pt-5 text-muted text-center text-small">
+        <p class="mb-1">&copy; 2017-2019 Company Name</p>
+        <ul class="list-inline">
+            <li class="list-inline-item"><a href="#">Privacy</a></li>
+            <li class="list-inline-item"><a href="#">Terms</a></li>
+            <li class="list-inline-item"><a href="#">Support</a></li>
+        </ul>
+    </footer>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
