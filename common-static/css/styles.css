@@ -47,9 +47,34 @@ body {
 
 .jumbotron{
     background-image: url("../img/bannerImage.jpg");
-    height: 50%;
-      background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
 }
+
+.btn-primary-outline {
+  background-color: transparent;
+  border-color: rgb(255, 251, 251);
+  color: #ffffff;
+}
+
+.btn-primary-outline:hover{
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.banner-bar{
+    background-color: #2D7DD2;
+    color: #ffffff;
+    margin-top: -32px;
+    text-align: center;
+    height: 100px;
+}
+
+.banner-bar-text{
+    padding-top: 15px;
+}
+
+
+
