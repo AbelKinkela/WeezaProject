@@ -72,12 +72,12 @@ body {
     height: 100px;
 }
 
-.banner-bar-text{
+.banner-bar-text, .garanty-bar-text{
     padding-top: 15px;
+
 }
 
 .garanty-bar{
-
     background-color: #2D7DD2;
     color: #ffffff;
     height: 100px;
@@ -95,6 +95,24 @@ body {
 .garanty-bar div{
     flex-grow: 2;
 }
+.garanty-bar div > div{
+    text-align: center;
+}
+
+.garanty-content{
+    display: flex;
+}
+
+.garanty-content img{
+    padding: 20px;
+    flex-grow: 2
+}
+
+.garanty-text{
+    font-size: 18px;
+    padding: 150px 0px 0px 0px;
+
+}
 
 footer{
     background-color: black;
@@ -107,4 +125,6 @@ footer > div{
 
 footer div > div{
     flex-grow: 1;
+    padding-left: 20px;
+
 }
