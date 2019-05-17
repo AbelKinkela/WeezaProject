@@ -91,12 +91,13 @@ body {
     margin-top: 12px;
     width: 140px;
 }
-.garanty-bar div{
-    flex-grow: 2;
-}
-
 footer{
     display: flex;
     background-color: black;
     color: white;
 }
+.garanty-bar div{
+    flex-grow: 2;
+}
+
+
