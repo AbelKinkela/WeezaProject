@@ -36,13 +36,18 @@ body {
     background-color: #ffffff;
 }
 
-@media screen and (max-width: 800px) {
-
-}
 
 
 .nav-link{
     color: black;
+}
+
+.menu{
+    margin: auto;
+}
+.book-button{
+    position: relative;
+  float: right;
 }
 
 .jumbotron{
@@ -105,7 +110,7 @@ body {
 
 .garanty-content img{
     padding: 20px;
-    flex-grow: 2
+    flex-grow: 2;
 }
 
 .garanty-text{
@@ -127,4 +132,18 @@ footer div > div{
     flex-grow: 1;
     padding-left: 20px;
 
+}
+
+/* Responsiveness */
+@media screen and (max-width: 900px) {
+    .garanty-content{
+        display: block;
+        order: -1;
+    }
+    .garanty-content img{
+        width: 500px;
+        height: 300px;
+
+    }
+}
 }

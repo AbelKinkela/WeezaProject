@@ -1,182 +1,103 @@
-<!doctype html>
-<html lang="en">
+{% extends "html/base.html" %}
+
+{% block content %}
 {% load static %}
+<main role="main">
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Weeza | Seja bem-vindo!</title>
-    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
-</head>
-
-<body>
-
-    <nav class="navbar navbar-expand-md fixed-top ">
+    <div class="jumbotron jumbotron-fluid">
         <div class="container">
-            <img class="" src="{% static 'img/WeezaLogo3.png' %}" alt="Weeza" width="150">
-            <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
-                aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse " id="navbarsExampleDefault">
-                <ul class="navbar-nav mr-auto ">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link " href="#">Disabled</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-                        <div class="dropdown-menu" aria-labelledby="dropdown01">
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <a class="dropdown-item" href="#">Something else here</a>
-                        </div>
-                    </li>
-                </ul>
-            </div>
+            <h5 class="display-3 text-light">Receba assistência a seu conforto!</h5>
+            <p class="text-light">
+                Tenha empregado de limpeza ou tecnico para a sua casa ou local de trabalho só quando mais
+                precisares!
+                Weeza dispoe-se à seu serviço com profissionais certificados dando seu melhor para que se sinta
+                feliz. </p>
+            <button type="button" class="btn btn-primary-outline">Saiba mais &raquo;</button>
         </div>
-    </nav>
+    </div>
 
-    <main role="main">
+    <div class="banner-bar">
+        <h2 class="banner-bar-text">Tarefas de limpeza, instalação e manutenção</h2>
+        <p>Agende agora seu trabalho, selecionando um serviço</p>
+    </div>
 
-
-        <div class="jumbotron jumbotron-fluid">
-            <div class="container">
-                <h5 class="display-3 text-light">Receba assistência a seu conforto!</h5>
-                <p class="text-light">
-                    Tenha empregado de limpeza ou tecnico para a sua casa ou local de trabalho só quando mais
-                    precisares!
-                    Weeza dispoe-se à seu serviço com profissionais certificados dando seu melhor para que se sinta
-                    feliz. </p>
-                <button type="button" class="btn btn-primary-outline">Saiba mais &raquo;</button>
-            </div>
-        </div>
-
-        <div class="banner-bar">
-            <h2 class="banner-bar-text">Tarefas de limpeza, instalação e manutenção</h2>
-            <p>Agende agora seu trabalho, selecionando um serviço</p>
-        </div>
-
-        <div class="container">
-            <br>
-            <h5>Confira os serviços</h5>
-            <hr>
-            <div class="row">
-                <div class="col-md-3">
-                    <img class="img-responsive" src="{% static 'img/limpeza-de-casa.jpg' %}" alt="Chania" width="100%"
-                        height="200">
-                    <button type="button" class="btn btn-light btn-block">Limpeza de casa &raquo;</button>
-                </div>
-                <div class="col-md-3">
-                    <img class="img-responsive" src="{% static 'img/limpeza-de-casa.jpg' %}" alt="Chania" width="100%"
-                        height="200">
-                    <button type="button" class="btn btn-light btn-block">Limpeza de casa &raquo;</button>
-                </div>
-                <div class="col-md-3">
-                    <img class="img-responsive" src="{% static 'img/limpeza-de-casa.jpg' %}" alt="Chania" width="100%"
-                        height="200">
-                    <button type="button" class="btn btn-light btn-block">Limpeza de casa &raquo;</button>
-                </div>
-                <div class="col-md-3">
-                    <img class="img-responsive" src="{% static 'img/limpeza-de-casa.jpg' %}" alt="Chania" width="100%"
-                        height="200">
-                    <button type="button" class="btn btn-light btn-block">Limpeza de casa &raquo;</button>
-                </div>
-
-
-            </div>
-            <div class="row">
-                <div class="col-md-3">
-                    <img class="img-responsive" src="{% static 'img/limpeza-de-casa.jpg' %}" alt="Chania" width="100%"
-                        height="200">
-                    <button type="button" class="btn btn-light btn-block">Limpeza de casa &raquo;</button>
-                </div>
-                <div class="col-md-3">
-                    <img class="img-responsive" src="{% static 'img/limpeza-de-casa.jpg' %}" alt="Chania" width="100%"
-                        height="200">
-                    <button type="button" class="btn btn-light btn-block">Limpeza de casa &raquo;</button>
-                </div>
-
-                <div class="col-md-3">
-                    <img class="img-responsive" src="{% static 'img/limpeza-de-casa.jpg' %}" alt="Chania" width="100%"
-                        height="200">
-                    <button type="button" class="btn btn-light btn-block">Limpeza de casa &raquo;</button>
-                </div>
-                <div class="col-md-3">
-                    <img class="img-responsive" src="{% static 'img/limpeza-de-casa.jpg' %}" alt="Chania" width="100%"
-                        height="200">
-                    <button type="button" class="btn btn-light btn-block">Limpeza de casa &raquo;</button>
-                </div>
-
-
-            </div>
-            <hr>
-        </div>
-        <div class="garanty-bar">
-            <div class="garanty-bar-content container">
-                <img class="img-responsive" src="{% static 'img/selo-garantia.png' %}" alt="Chania" width="250"
+    <div class="container">
+        <br>
+        <h5>Confira os serviços</h5>
+        <hr>
+        <div class="row">
+            <div class="col-md-3">
+                <img class="img-responsive" src="{% static 'img/limpeza-de-casa.jpg' %}" alt="Chania" width="100%"
                     height="200">
-                <div>
-                    <h3 class="garanty-bar-text">Com profissionais avaliados e treinados</h3>
-                    <p>Nossos profissionais são avaliados a cada serviço para garantir que esteja satisfeito a 100%.</p>
-                </div>
+                <button type="button" class="btn btn-light btn-block">Limpeza de casa &raquo;</button>
+            </div>
+            <div class="col-md-3">
+                <img class="img-responsive" src="{% static 'img/limpeza-de-casa.jpg' %}" alt="Chania" width="100%"
+                    height="200">
+                <button type="button" class="btn btn-light btn-block">Limpeza de casa &raquo;</button>
+            </div>
+            <div class="col-md-3">
+                <img class="img-responsive" src="{% static 'img/limpeza-de-casa.jpg' %}" alt="Chania" width="100%"
+                    height="200">
+                <button type="button" class="btn btn-light btn-block">Limpeza de casa &raquo;</button>
+            </div>
+            <div class="col-md-3">
+                <img class="img-responsive" src="{% static 'img/limpeza-de-casa.jpg' %}" alt="Chania" width="100%"
+                    height="200">
+                <button type="button" class="btn btn-light btn-block">Limpeza de casa &raquo;</button>
             </div>
 
+
         </div>
-        <div class="container garanty-content">
-            <p class="garanty-text"><strong>Sua satisfação é o nosso objetivo.</strong> <br>
-                Nossos técnicos e agentes vão te surpreender pela rapidez e eficácia na manutenção do seu . Mas se mesmo
-                assim
-                não te
-                satisfazerem, trabalharemos para acertar na próxima. <br><br>
-                <a href="#"><strong>Saiba mais >></strong></a>
-            </p>
-            <img src="{% static 'img/tidy-home.jpg' %}" alt="" width="550" height="400">
-        </div>
-    </main>
+        <div class="row">
+            <div class="col-md-3">
+                <img class="img-responsive" src="{% static 'img/limpeza-de-casa.jpg' %}" alt="Chania" width="100%"
+                    height="200">
+                <button type="button" class="btn btn-light btn-block">Limpeza de casa &raquo;</button>
+            </div>
+            <div class="col-md-3">
+                <img class="img-responsive" src="{% static 'img/limpeza-de-casa.jpg' %}" alt="Chania" width="100%"
+                    height="200">
+                <button type="button" class="btn btn-light btn-block">Limpeza de casa &raquo;</button>
+            </div>
+
+            <div class="col-md-3">
+                <img class="img-responsive" src="{% static 'img/limpeza-de-casa.jpg' %}" alt="Chania" width="100%"
+                    height="200">
+                <button type="button" class="btn btn-light btn-block">Limpeza de casa &raquo;</button>
+            </div>
+            <div class="col-md-3">
+                <img class="img-responsive" src="{% static 'img/limpeza-de-casa.jpg' %}" alt="Chania" width="100%"
+                    height="200">
+                <button type="button" class="btn btn-light btn-block">Limpeza de casa &raquo;</button>
+            </div>
 
 
-    <footer>
-        <div class="container">
+        </div>
+        <hr>
+    </div>
+    <div class="garanty-bar">
+        <div class="garanty-bar-content container">
+            <img class="img-responsive" src="{% static 'img/selo-garantia.png' %}" alt="Chania" width="250"
+                height="200">
             <div>
-                <div>
-                    <h5>Links importantes</h5>
-                    <p><a href="#">Contacte-nos</a></p>
-                    <p><a href="#">Sobre nós</a></p>
-                    <p><a href="#">Trabalhe Connosco</a></p>
-                </div>
-            </div>
-            <div>
-                <h5>Siga-nos</h5>
-                <p><a href="#">Facebook</a></p>
-                <p><a href="#">Twitter</a></p>
-                <p><a href="#">Instagram</a></p>
-            </div>
-            <div>
-                <h5>Top Serviços</h5>
-                <p><a href="#">Limpeza de casa</a></p>
-                <p><a href="#">Canalização</a></p>
+                <h3 class="garanty-bar-text">Com profissionais avaliados e treinados</h3>
+                <p>Nossos profissionais são avaliados a cada serviço para garantir que esteja satisfeito a 100%.</p>
             </div>
         </div>
-        <p>
-            &copy; Company 2017-2018
+
+    </div>
+    <div class="container garanty-content">
+        <p class="garanty-text"><strong>Sua satisfação é o nosso objetivo.</strong> <br>
+            Nossos técnicos e agentes vão te surpreender pela rapidez e eficácia na manutenção do seu . Mas se mesmo
+            assim
+            não te
+            satisfazerem, trabalharemos para acertar na próxima. <br><br>
+            <a href="#"><strong>Saiba mais >></strong></a>
         </p>
-    </footer>
-    <script src="{% static 'jquery-3.4.1.min.js' %}" crossorigin="anonymous"></script>
-    <script src="{% static 'popper.min.js' %}"></script>
-    <script src="{% static 'js/bootstrap.min.js' %}"></script>
-    <script src="{% static 'js/script.js' %}"></script>
-</body>
+        <img src="{% static 'img/tidy-home.jpg' %}" alt="" width="550" height="400">
+    </div>
+</main>
 
-</html>
+{% endblock %}
