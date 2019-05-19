@@ -21,6 +21,6 @@ import main.views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', main.views.home, name='home'),
-    path('aderir', accs.views.WorkerModelCreateView, name='join_weeza_form'),
+    path('aderir', accs.views.WorkerModelCreateView, name='aderir'),
 
 ]

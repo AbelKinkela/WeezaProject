@@ -4,4 +4,8 @@ from django.views.generic import CreateView
 
 
 def home(request):
-    return render(request, 'html/index.html')
+    return render(request, 'main/index.html')
+
+
+def worker_sign_up(request):
+    return

@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>😍Trabalhe connosco | Weeza</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-md fixed-top ">
+        <div class="container">
+            <a href="{% url 'home' %}"><img class="" src="{% static 'img/WeezaLogo3.png' %}" alt="Weeza"
+                    width="150"></a>
+            <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+                aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse " id="navbarsExampleDefault">
+                <ul class="navbar-nav mr-auto menu">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">+244 925 381 845</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Acerca de Weeza</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="{% url 'aderir' %}">Trabalhe
+                            connosco</a>
+                    </li>
+
+                    <!-- <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                            <div class="dropdown-menu" aria-labelledby="dropdown01">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                        </li> -->
+                </ul>
+                <button class="btn btn-primary book-button">
+                    RESERVAR UM SERVIÇO
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main role="main">
+
+
+        <div class="jumbotron form-image jumbotron-fluid">
+            <div class="container">
+                <h5 class="display-3 text-light"></h5>
+
+            </div>
+
+
+            {% block content %}
+            <form form method="post" class="needs-validation container form-container" novalidate>
+                {% load crispy_forms_tags %}
+
+                {% csrf_token %}
+
+                <!-- Personal details -->
+                <h4 class=" mb-3">Dados Pessoais</h4>
+                <hr class="mb-4">
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <!-- name -->
+                        {{ form.name|as_crispy_field }}
+                        <div class="invalid-feedback">
+                            Por favor introduza um nome válido.
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        {{ form.last_name|as_crispy_field }}
+                        <!-- surname -->
+                        <div class="invalid-feedback">
+                            Por favor introduza um Sobrenome válido.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <!-- Phone -->
+                    {{ form.phone|as_crispy_field }}
+                    <div class="invalid-feedback">
+                        Por favor introduza um número válido
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <!-- Email -->
+                    {{ form.email|as_crispy_field }}
+                    <div class="invalid-feedback">
+                        Por favor introduza um email válido
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <!-- ID -->
+                    {{ form.national_ID_number|as_crispy_field }}
+                    <div class="invalid-feedback">
+                        Por favor introduza um número de BI válido
+                    </div>
+                </div>
+                <!-- Address details -->
+                <br>
+                <h4 class="mb-3">Informação da Moradia</h4>
+                <hr class="mb-4">
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <!-- street -->
+                        {{ form.street|as_crispy_field }}
+                        <div class="invalid-feedback">
+                            Por favor preencha o campo com o nome de rua válida!
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <!-- It will be good to suggest the user as he tries to fill in -->
+                        <!-- neighbourhood -->
+                        {{ form.neighbourhood|as_crispy_field }}
+                        <div class="invalid-feedback">
+                            Por favor preencha este campo!
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <!-- municipality -->
+                        {{ form.municipality|as_crispy_field }}
+                        <div class="invalid-feedback">
+                            Por favor selecione um município
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <!-- province -->
+                        {{ form.province|as_crispy_field }}
+                        <div class="invalid-feedback">
+                            Por favor selecione uma provincia
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Service details -->
+                <br>
+                <h4 class="mb-3">Sobre o seu serviço</h4>
+                <hr class="mb-4">
+                <div class="mb-3">
+                    <!-- Service -->
+                    {{ form.service|as_crispy_field }}
+                </div>
+
+                <div class="mb-3">
+                    <!-- Years of experience -->
+                    {{ form.years_of_experience|as_crispy_field }}
+                </div>
+
+                <br>
+                <h4 class="mb-3">Selecione os dias que pretendes trabalhar </h4>
+                <hr class="mb-4">
+                <!-- Work days -->
+                {{ form.workdays|as_crispy_field }}
+                <!-- Banking details -->
+                <br>
+                <h4 class="mb-3">Informação Bancária </h4>
+                <hr class="mb-4">
+
+                <div class=" mb-3">
+                    <!-- bank name -->
+                    {{ form.bank_name|as_crispy_field }}
+                    <div class="invalid-feedback">
+                        Por favor selecione um banco
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <!-- Account number -->
+                    {{ form.bank_account_number|as_crispy_field }}
+                    <div class="invalid-feedback">
+                        O número introduzido não é válido, por favor tente novamente
+                    </div>
+                </div>
+                <div class="text-center">
+                    <button class="btn btn-primary btn-lg" type="submit">Avançar</button><br><br>
+                </div>
+            </form>
+
+            {% endblock %}
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div>
+                <div>
+                    <h5>Links importantes</h5>
+                    <p><a href="#">Contacte-nos</a></p>
+                    <p><a href="#">Sobre nós</a></p>
+                    <p><a href="#">Trabalhe Connosco</a></p>
+                </div>
+            </div>
+            <div>
+                <h5>Siga-nos</h5>
+                <p><a href="#">Facebook</a></p>
+                <p><a href="#">Twitter</a></p>
+                <p><a href="#">Instagram</a></p>
+            </div>
+            <div>
+                <h5>Top Serviços</h5>
+                <p><a href="#">Limpeza de casa</a></p>
+                <p><a href="#">Canalização</a></p>
+            </div>
+        </div>
+        <p>
+            &copy; Company 2017-2018
+        </p>
+    </footer>
+    <script src="{% static 'jquery-3.4.1.min.js' %}" crossorigin="anonymous"></script>
+    <script src="{% static 'popper.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+
+</html>
