@@ -6,8 +6,12 @@ class WorkerModel(models.Model):
     # Personal details
     name = models.CharField(max_length=100, blank=False, null=True)
     last_name = models.CharField(max_length=100, blank=False, null=True)
-    phone = models.IntegerField()
-    email = models.EmailField()
+    phone_regex = RegexValidator(
+        regex=r'^\+?1?\d{9,15}$', message="Phone number must be entered in the format: '923673311'. Up to 15 digits allowed.")
+    phone_number = models.CharField(
+        validators=[phone_regex], max_length=15, blank=False)
+    email = models.EmailField(blank=True)
+
     national_ID_number = models.CharField(
         max_length=130, blank=True, null=True)
 
@@ -75,23 +79,22 @@ class WorkerModel(models.Model):
     )
 
     WORKDAYS_CHOICES = (
-        (0, 'Domingo'),
-        (1, 'Segunda-Feira'),
-        (2, 'Terça-Feira'),
-        (3, 'Quarta-Feira'),
-        (4, 'Quinta-Feira'),
-        (5, 'Sexta-Feira'),
-        (6, 'Sábado'),
+        ('sunday', 'Domingo'),
+        ('monday', 'Segunda-Feira'),
+        ('tuesday', 'Terça-Feira'),
+        ('wednesday', 'Quarta-Feira'),
+        ('thursday', 'Quinta-Feira'),
+        ('friday', 'Sexta-Feira'),
+        ('suturday', 'Sábado'),
 
     )
 
     workdays = models.CharField(
-        max_length=1,
+        max_length=10,
         choices=WORKDAYS_CHOICES,
         null=True,
         default=1,
     )
-
     # Banking Information (not applicable in the form right now)
     BANKNAME_CHOICES = (
         ("bank_BAI", 'BANCO ANGOLANO DE INVESTIMENTOS, S.A. BAI'),
@@ -139,6 +142,6 @@ class CustomerModel(models.Model):
     fullName = models.CharField(max_length=100, blank=False, null=True)
     email = models.EmailField()
     phone_regex = RegexValidator(
-        regex=r'^\+?1?\d{9,15}$', message="Phone number must be entered in the format: '923 673 311'. Up to 15 digits allowed.")
+        regex=r'^\+?1?\d{9,15}$', message="O número deve seguir o formato: '923673311'")
     phone_number = models.CharField(
-        validators=[phone_regex], max_length=17, blank=True)
+        validators=[phone_regex], max_length=15, blank=True)

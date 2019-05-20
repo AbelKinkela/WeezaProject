@@ -70,49 +70,6 @@
 
                 {% csrf_token %}
 
-                <!-- Personal details -->
-                <h4 class=" mb-3">Dados Pessoais</h4>
-                <hr class="mb-4">
-                <div class="row">
-                    <div class="col-md-6 mb-3">
-                        <!-- name -->
-                        {{ form.name|as_crispy_field }}
-                        <div class="invalid-feedback">
-                            Por favor introduza um nome válido.
-                        </div>
-                    </div>
-                    <div class="col-md-6 mb-3">
-                        {{ form.last_name|as_crispy_field }}
-                        <!-- surname -->
-                        <div class="invalid-feedback">
-                            Por favor introduza um Sobrenome válido.
-                        </div>
-                    </div>
-                </div>
-
-                <div class="mb-3">
-                    <!-- Phone -->
-                    {{ form.phone_number|as_crispy_field }}
-                    <div class="invalid-feedback">
-                        Por favor introduza um número válido
-                    </div>
-                </div>
-
-                <div class="mb-3">
-                    <!-- Email -->
-                    {{ form.email|as_crispy_field }}
-                    <div class="invalid-feedback">
-                        Por favor introduza um email válido
-                    </div>
-                </div>
-
-                <div class="mb-3">
-                    <!-- ID -->
-                    {{ form.national_ID_number|as_crispy_field }}
-                    <div class="invalid-feedback">
-                        Por favor introduza um número de BI válido
-                    </div>
-                </div>
                 <!-- Address details -->
                 <br>
                 <h4 class="mb-3">Informação da Moradia</h4>
@@ -152,45 +109,38 @@
                     </div>
 
                 </div>
-
-                <!-- Service details -->
-                <br>
-                <h4 class="mb-3">Sobre o seu serviço</h4>
-                <hr class="mb-4">
-                <div class="mb-3">
-                    <!-- Service -->
-                    {{ form.service|as_crispy_field }}
-                </div>
-
-                <div class="mb-3">
-                    <!-- Years of experience -->
-                    {{ form.years_of_experience|as_crispy_field }}
-                </div>
-
-                <br>
-                <h4 class="mb-3">Selecione os dias que pretendes trabalhar </h4>
-                <hr class="mb-4">
-                <!-- Work days -->
-                {{ form.workdays|as_crispy_field }}
-                <!-- Banking details -->
-                <br>
-                <h4 class="mb-3">Informação Bancária </h4>
+                <!-- Personal details -->
+                <h4 class=" mb-3">Dados Pessoais</h4>
                 <hr class="mb-4">
 
-                <div class=" mb-3">
-                    <!-- bank name -->
-                    {{ form.bank_name|as_crispy_field }}
-                    <div class="invalid-feedback">
-                        Por favor selecione um banco
+                <div class="row">
+                    <div class="col-md-12 mb-3">
+                        <!-- name -->
+                        {{ form.customer_name|as_crispy_field }}
+                        <div class="invalid-feedback">
+                            Por favor introduza um nome válido.
+                        </div>
                     </div>
                 </div>
-                <div class="mb-3">
-                    <!-- Account number -->
-                    {{ form.bank_account_number|as_crispy_field }}
-                    <div class="invalid-feedback">
-                        O número introduzido não é válido, por favor tente novamente
+                <div class="row">
+                    <div class="col-md-12 mb-3">
+                        <!-- Phone -->
+                        {{ form.phone_number|as_crispy_field }}
+                        <div class="invalid-feedback">
+                            Por favor introduza um número válido
+                        </div>
+                    </div>
+
+                    <div class="col-md-12 mb-3">
+                        <!-- Email -->
+                        {{ form.email|as_crispy_field }}
+                        <div class="invalid-feedback">
+                            Por favor introduza um email válido
+                        </div>
                     </div>
                 </div>
+
+
                 <div class="text-center">
                     <input class="btn btn-primary btn-lg" type="submit"></input><br><br>
                 </div>

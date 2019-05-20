@@ -22,5 +22,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', main.views.home, name='home'),
     path('aderir', accs.views.WorkerModelCreateView, name='aderir'),
+    path('limpezadecasa', main.views.houseCleaning, name='limpezadecasa'),
+    path('canalizacao', main.views.plumbing, name='canalizacao'),
+    path('electricidade', main.views.electricity, name='electricidade'),
 
 ]
