@@ -25,5 +25,17 @@ urlpatterns = [
     path('limpezadecasa', main.views.houseCleaning, name='limpezadecasa'),
     path('canalizacao', main.views.plumbing, name='canalizacao'),
     path('electricidade', main.views.electricity, name='electricidade'),
+    path('frioeclimatizacao', main.views.cold_and_air_conditioning,
+         name='frioeclimatizacao'),
+    path('lavagemdecarro', main.views.car_washing,
+         name='lavagemdecarro'),
+    path('mecanica', main.views.mechanic,
+         name='mecanica'),
+    path('serralheiro', main.views.lock_smith,
+         name='serralheiro'),
+    path('reparodeelectronicos', main.views.electronic_device_repair,
+         name='reparodeelectronicos'),
+
+
 
 ]

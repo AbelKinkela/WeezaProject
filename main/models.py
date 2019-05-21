@@ -125,3 +125,46 @@ class ElectricityTask(TaskModel):
         max_length=12,
         choices=ELECTRIC_AREA_CHOICES,
     )
+
+
+class CarWashTask(TaskModel):
+    CAR_SIZE_CHOICES = (
+        ("SMALL", 'Pequeno'),
+        ("MEDIUM", 'Médio'),
+        ("BIG", 'Grande'),
+    )
+    carSize = models.CharField(
+        max_length=12,
+        choices=CAR_SIZE_CHOICES,
+    )
+
+
+class ElectronicDeviceRepairTask(TaskModel):
+    DEVICE_CHOICES = (
+        ("PHONE", 'Telephone'),
+        ("TV", 'Televisão'),
+        ("DESKTOP", 'Computador de Mesa'),
+        ("LAPTOP", 'Laptop'),
+        ("RADIO", 'Rádio, Amplificador'),
+        ("OTHER", 'Outro'),
+
+    )
+    deviceType = models.CharField(
+        max_length=12,
+        choices=DEVICE_CHOICES,
+    )
+
+
+class Mecanic(TaskModel):
+    problemDescription = models.CharField(
+        max_length=500, blank=True, null=True)
+
+
+class LockSmithTask(TaskModel):
+    whatTodo = models.CharField(
+        max_length=500, blank=True, null=True)
+
+
+class ElectricityTask(TaskModel):
+    whatTodo = models.CharField(
+        max_length=500, blank=True, null=True)
