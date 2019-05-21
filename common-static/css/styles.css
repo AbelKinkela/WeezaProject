@@ -142,6 +142,46 @@ main{
 
 }
 
+/* Styling the houseCleaning.html */
+
+.form-image-housecleaning{
+    background-color: #ac3737;
+    background: url(../img/cleaning1.jpg), url(../img/whitebg.PNG);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: contain;
+
+}
+
+/* Styling plumbing.html */
+.form-image-plumbing{
+    background-color: #ac3737;
+    background: url(../img/canalizacao.jpg), url(../img/whitebg.PNG);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: contain;
+
+}
+
+/* Styling electricity.html */
+.form-image-electricity{
+    background-color: #ac3737;
+    background: url(../img/electricidade.jpg), url(../img/whitebg.PNG);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: contain;
+
+}
+/* Styling worker_sign_up.html */
+.form-image-workersignup{
+    background-color: #ac3737;
+    background: url(../img/aderir2.jpg), url(../img/whitebg.PNG);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: contain;
+
+}
+
 /* Responsiveness */
 @media screen and (max-width: 900px) {
     .garanty-content{
